@@ -1,0 +1,8 @@
+/** @format */
+
+.content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+}
