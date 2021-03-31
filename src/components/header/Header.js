@@ -11,7 +11,7 @@ function Header() {
     <div className={styles.header}>
       <div className={commonStyles.content}>
         <div className={styles.logoContainer}>
-          <img src='assets/logo.png' />
+          <img src='http://localhost:3000/assets/logo.png' />
         </div>
         <Menu />
       </div>

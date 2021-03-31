@@ -31,13 +31,13 @@
   text-align: center;
 }
 
-a {
+.menuList ul li a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
 
-a:hover {
+.menuList ul li a:hover {
   color: #e84747;
 }
 
