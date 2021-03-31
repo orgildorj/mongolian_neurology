@@ -17,9 +17,6 @@ function Menu() {
             <Link to='/about'>Бидний тухай</Link>
           </li>
           <li>
-            <Link to='/news'>Мэдээ</Link>
-          </li>
-          <li>
             <Link to='/contact'>Холбоо барих</Link>
           </li>
         </ul>

@@ -12,9 +12,12 @@ function App() {
     <>
       <Header></Header>
       <Switch>
-        <Route exact path='/' component={Content} />
+        <Route
+          exact
+          path='/'
+          render={() => <Content source='assets/demo_news.json' />}
+        />
         <Route exact path='/about' component={Content} />
-        <Route exact path='/news' component={Content} />
         <Route exact path='/contact' component={Contact} />
       </Switch>
       <Footer></Footer>
