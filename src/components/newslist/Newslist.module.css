@@ -1,4 +1,8 @@
 /** @format */
+.newslistContainer {
+  position: absolute;
+}
+
 .newslistContainer ul {
   list-style: none;
   padding: 0;
@@ -7,19 +11,42 @@
 
 .newslistContainer ul li {
   display: flex;
+  background-color: rgb(251, 251, 251);
   position: relative;
   white-space: nowrap;
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 0px;
 }
 
 li + li {
   margin-top: 10px;
 }
 
-.metadata {
+/* News Section */
+.newsSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  flex: 1;
+}
+
+.pic {
+  position: absolute;
+  flex: 2;
+}
+
+.introduction {
+  position: absolute;
+}
+/* .metadata {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .metadata img {
@@ -28,8 +55,15 @@ li + li {
 }
 
 .introduction {
-  display: inline-block;
+  display: flex;
   flex: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.introduction div {
+  position: relative;
 }
 
 .introduction a {
@@ -38,14 +72,14 @@ li + li {
   position: absolute;
 }
 
-.introduction h3 {
+.introduction a p {
   margin: 0;
-  font-size: 110%;
-  overflow-wrap: break-word;
-  position: absolute;
+  display: inline-grid;
 }
 
 .subtitle {
   font-style: italic;
   color: #989898;
+  text-overflow: ellipsis;
 }
+ */
