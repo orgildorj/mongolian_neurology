@@ -19,7 +19,6 @@ export default () => {
   return (
     
       <div className={styles.newslistContainer}>
-        <SlideShow articles={articles}/>
         <ul>
           {articles.length
             ? articles.map(({ id, Title, Text, Date, Images }) => (

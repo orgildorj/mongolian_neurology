@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Config from "../../Config";
 import { fetchArticles } from "../../modules/news/NewsService";
-import SlideShow from "../slideShow/SlideShow";
+import SlideShow from "../slideShow/SlideShow"
 
 import commonStyles from "../Common.module.css";
 import styles from "./Newslist.module.css";
@@ -19,7 +19,6 @@ export default () => {
   return (
     
       <div className={styles.newslistContainer}>
-        <SlideShow articles={articles}/>
         <ul>
           {articles.length
             ? articles.map(({ id, Title, Text, Date, Images }) => (

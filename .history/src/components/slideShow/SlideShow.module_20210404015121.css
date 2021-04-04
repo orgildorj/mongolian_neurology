@@ -1,0 +1,17 @@
+.slidesContainer {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+.eachSlide  {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.imageContainer {
+    width: 100%
+}

@@ -23,12 +23,12 @@ const Article = () => {
 
   return (
     <div className={commonStyles.content}>
-      <h1 className={styles.title}>{article.Title}</h1>
+      <h1 className={styles.title}>{article[0].Title}</h1>
 
         
       {/* <img src={`${Config.contentUrl}${image.url}`} /> */}
 
-      <p>{article.text}</p>
+      <p>{article[0].text}</p>
     </div>
   );
 };

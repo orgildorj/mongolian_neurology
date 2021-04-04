@@ -42,15 +42,16 @@ li + li {
   display: inline-block;
   flex: 2;
   position: relative
-  
 }
 
+.introduction div {
+  position: absolute
+}
 
 .introduction a {
   color: black;
   text-decoration: none;
   position: absolute;
-  display: inline-block;
 }
 
 .introduction h3 {
@@ -58,9 +59,7 @@ li + li {
   font-size: 110%;
   overflow-wrap: break-word;
   position: absolute;
-  display: inline-grid;
 }
-
 
 .subtitle {
   font-style: italic;

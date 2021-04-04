@@ -58,7 +58,6 @@ li + li {
   font-size: 110%;
   overflow-wrap: break-word;
   position: absolute;
-  display: inline-grid;
 }
 
 

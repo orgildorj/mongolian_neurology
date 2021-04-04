@@ -15,20 +15,20 @@ const Article = () => {
   const [articles, setArticles] = useState([]);
 
   if (articles.length === 0) {
-    fetchArticles().then((data) => setArticles(data));
+    fetchArticles().then((data) => setArticle(data));
   }
 
-  const article = getArticle(articles, id)
+  const article = articles.get()
   
 
   return (
     <div className={commonStyles.content}>
-      <h1 className={styles.title}>{article.Title}</h1>
+      <h1 className={styles.title}>{article[0].Title}</h1>
 
         
       {/* <img src={`${Config.contentUrl}${image.url}`} /> */}
 
-      <p>{article.text}</p>
+      <p>{article[0].text}</p>
     </div>
   );
 };

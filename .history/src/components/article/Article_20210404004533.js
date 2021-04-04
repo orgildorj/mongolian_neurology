@@ -2,7 +2,7 @@
 
 import React, {useState} from "react";
 import { useParams } from "react-router-dom";
-import { fetchArticles } from "../../modules/news/NewsService";
+import { fetchArticle } from "../../modules/article/ArticleService";
 import Config from "../../Config";
 
 import commonStyles from "../Common.module.css";
@@ -12,34 +12,24 @@ import data from "../../data/demo_news.json";
 
 const Article = () => {
   const { id } = useParams();
-  const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState({});
 
   if (articles.length === 0) {
-    fetchArticles().then((data) => setArticles(data));
+    fetchArticle().then((data) => setArticle(data));
   }
 
-  const article = getArticle(articles, id)
   
 
   return (
     <div className={commonStyles.content}>
-      <h1 className={styles.title}>{article.Title}</h1>
+      <h1 className={styles.title}>{article[0].Title}</h1>
 
         
       {/* <img src={`${Config.contentUrl}${image.url}`} /> */}
 
-      <p>{article.text}</p>
+      <p>{article[0].text}</p>
     </div>
   );
 };
 
 export default Article;
-
-const getArticle = (articles, id) => {
-  for(var i = 0; i<articles.length; i++) {
-    if(articles[i].id === id)
-      return articles[i];
-  }
-
-  return null;
-}

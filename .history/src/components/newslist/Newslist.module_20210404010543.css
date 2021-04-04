@@ -42,7 +42,6 @@ li + li {
   display: inline-block;
   flex: 2;
   position: relative
-  
 }
 
 
@@ -58,9 +57,7 @@ li + li {
   font-size: 110%;
   overflow-wrap: break-word;
   position: absolute;
-  display: inline-grid;
 }
-
 
 .subtitle {
   font-style: italic;
