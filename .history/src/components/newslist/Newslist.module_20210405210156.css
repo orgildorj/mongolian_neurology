@@ -1,0 +1,105 @@
+/** @format */
+
+/* Main news */
+.latestNews {
+  display: flex;
+  flex-direction: column;
+}
+
+.latestNews img {
+  width: 100%;
+}
+
+.latestNewsTitle {
+  display: flex;
+  float: right;
+  width: 50%;
+}
+
+.latestNews span {
+  font-size: 150%;
+  font-weight: 650;
+}
+/* NewslistContainer */
+
+.newslistContainer ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.newslistContainer ul li {
+  display: flex;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #989898;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.metadata {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.imageContainer {
+  flex: 2;
+}
+
+.imageContainer img {
+  max-width: 90%;
+}
+
+.details {
+  flex: 1;
+}
+
+.intro {
+  flex: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro a {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  display: inline-block;
+}
+
+.introTitle {
+  height: fit-content;
+}
+
+.introTitle p {
+  margin: 0;
+  font: 1em;
+  font-weight: 650;
+}
+
+.introTitle {
+  flex: 1;
+}
+
+.introContinue {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.introContinue p {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.introContinue a:hover {
+  color: #e84747;
+}
