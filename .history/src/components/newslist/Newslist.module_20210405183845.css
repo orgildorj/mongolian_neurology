@@ -1,0 +1,66 @@
+/** @format */
+.newslistContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.newslistContainer ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.newslistContainer ul li {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+.metadata {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.imageContainer {
+}
+
+.imageContainer img {
+  max-width: 70%;
+  height: auto;
+}
+
+.details {
+  flex: 1;
+}
+
+.introduction {
+  display: inline-block;
+  flex: 2;
+  position: relative;
+}
+
+.introduction a {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  display: inline-block;
+}
+
+.headline {
+  margin: 0;
+  font: 1em;
+  font-weight: 650;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #989898;
+}

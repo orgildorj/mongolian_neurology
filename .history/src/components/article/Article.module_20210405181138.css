@@ -1,0 +1,9 @@
+/** @format */
+
+.title {
+  border-bottom: 1px solid rgb(186, 186, 186);
+}
+
+.imageContainer img {
+  width: 100%;
+}

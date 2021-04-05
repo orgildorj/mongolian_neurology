@@ -1,0 +1,63 @@
+/** @format */
+.newslistContainer {
+  width: 60%;
+  margin: 0 auto;
+  
+  
+}
+
+.newslistContainer ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative
+}
+
+.newslistContainer ul li {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+
+.metadata {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metadata img {
+  max-width: 70%;
+  height: auto;
+}
+
+.introduction {
+  display: inline-block;
+  flex: 2;
+  position: relative
+}
+
+.introduction a {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+}
+
+.introduction h3 {
+  margin: 0;
+  font-size: 110%;
+  overflow-wrap: break-word;
+  position: absolute;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #989898;
+}

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Config from "../../Config";
 import { fetchArticles } from "../../modules/news/NewsService";
+import SlideShow from "../slideShow/SlideShow";
 
 import commonStyles from "../Common.module.css";
 import styles from "./Newslist.module.css";
@@ -67,33 +68,37 @@ export default Newslist;
   }
 
   return (
-    <div className={commonStyles.content}>
-      <div className={styles.newslistContainer}>
-        <ul>
-          {articles.length
-            ? articles.map(({ id, Title, Text, Date, Images }) => (
+    <div className={styles.newslistContainer}>
+      <ul>
+        {articles.length
+          ? articles.map(
+              ({ id, Title, Text, Date, Images, published_at, Author }) => (
                 <li key={id}>
                   <div className={styles.metadata}>
-                    <img
-                      src={`${Config.contentUrl}${Images[0].formats.thumbnail.url}`}
-                    />
+                    <div className={styles.details}>
+                      <span>{Author}</span>
+
+                      <span>{published_at.substring(0, 10)}</span>
+                    </div>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={`${Config.contentUrl}${Images[0].formats.thumbnail.url}`}
+                      />
+                    </div>
                   </div>
 
                   <div className={styles.introduction}>
-                    <h3>
+                    <div>
                       <Link key={id} to={`article/${id}`}>
-                        <span className={styles.headline}>{Title}</span>
-                        <span className={styles.subtitle}>
-                          {Text.substr(20)}
-                        </span>
+                        <p className={styles.headline}>{Title}</p>
                       </Link>
-                    </h3>
+                    </div>
                   </div>
                 </li>
-              ))
-            : ""}
-        </ul>
-      </div>
+              )
+            )
+          : ""}
+      </ul>
     </div>
   );
 };
