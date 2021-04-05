@@ -2,6 +2,10 @@
 
 import React from "react";
 
-const Content = () => <div>some content</div>;
+import commonStyles from "../Common.module.css";
+
+function Content() {
+  return <div className={commonStyles.content}>Content</div>;
+}
 
 export default Content;
