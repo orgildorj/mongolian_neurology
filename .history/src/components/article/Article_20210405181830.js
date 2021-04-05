@@ -34,10 +34,7 @@ const Article = () => {
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
       <div className={styles.imageContainer}>
-        <img
-          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-          alt='image'
-        />
+        <img src={`${Config.contentUrl}${images[0].url}`} />
       </div>
       <div className={styles.textContainer}>
         <p>{article["Text"]}</p>

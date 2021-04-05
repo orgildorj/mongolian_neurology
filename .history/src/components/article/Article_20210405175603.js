@@ -26,24 +26,7 @@ const Article = () => {
     });
   }
 
-  const images = article["Images"];
-
-  return (
-    <div className={commonStyles.content}>
-      <div>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.imageContainer}>
-        <img
-          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-          alt='image'
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
-      </div>
-    </div>
-  );
+  return <div className={commonStyles.content}></div>;
   // <div className={commonStyles.content}>
   //   <h1 className={styles.title}>{article.Title}</h1>
 

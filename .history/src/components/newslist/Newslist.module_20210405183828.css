@@ -29,13 +29,10 @@ li + li {
   flex-direction: row;
 }
 
-.imageContainer {
-  flex: 1;
-}
-
 .imageContainer img {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
+  flex: 1;
 }
 
 .details {

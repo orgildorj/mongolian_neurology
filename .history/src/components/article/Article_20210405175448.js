@@ -17,6 +17,9 @@ const Article = () => {
     Title: "",
     Date: "",
     Text: "",
+    published_at: "",
+    created_at: "",
+    updated_at: "",
     Images: [],
   });
 
@@ -25,25 +28,9 @@ const Article = () => {
       setArticle(data);
     });
   }
+  console.log(article);
 
-  const images = article["Images"];
-
-  return (
-    <div className={commonStyles.content}>
-      <div>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.imageContainer}>
-        <img
-          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-          alt='image'
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
-      </div>
-    </div>
-  );
+  return <div>{article["Title"]}</div>;
   // <div className={commonStyles.content}>
   //   <h1 className={styles.title}>{article.Title}</h1>
 

@@ -25,23 +25,13 @@ const Article = () => {
       setArticle(data);
     });
   }
-
-  const images = article["Images"];
+  console.log(article["Text"]);
 
   return (
     <div className={commonStyles.content}>
-      <div>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.imageContainer}>
-        <img
-          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-          alt='image'
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
-      </div>
+      <h1>{article["Title"]}</h1>
+      <img src={`${Config.contentUrl}${article["Images"][0].url}`} />
+      <span>{article["Text"]}</span>
     </div>
   );
   // <div className={commonStyles.content}>

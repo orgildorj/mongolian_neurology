@@ -13,37 +13,20 @@ import data from "../../data/demo_news.json";
 const Article = () => {
   const { id } = useParams();
   const [article, setArticle] = useState({
-    id: 0,
+    id: "",
     Title: "",
     Date: "",
     Text: "",
     Images: [],
   });
 
-  if (article["id"] === 0) {
-    fetchArticle(id).then((data) => {
-      setArticle(data);
-    });
-  }
+  if (article["id"] === "") {
+    fetchArticle(id).then((data) => setArticle(data));
+    
 
-  const images = article["Images"];
+  console.log(article);
 
-  return (
-    <div className={commonStyles.content}>
-      <div>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.imageContainer}>
-        <img
-          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-          alt='image'
-        />
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
-      </div>
-    </div>
-  );
+  return <div>{article}</div>;
   // <div className={commonStyles.content}>
   //   <h1 className={styles.title}>{article.Title}</h1>
 

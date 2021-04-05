@@ -30,11 +30,10 @@ li + li {
 }
 
 .imageContainer {
-  flex: 1;
 }
 
 .imageContainer img {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
 }
 

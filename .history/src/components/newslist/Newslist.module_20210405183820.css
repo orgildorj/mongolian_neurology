@@ -26,16 +26,13 @@ li + li {
 .metadata {
   flex: 1;
   display: flex;
-  flex-direction: row;
-}
-
-.imageContainer {
-  flex: 1;
+  flex-direction: column;
 }
 
 .imageContainer img {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
+  flex: 1;
 }
 
 .details {

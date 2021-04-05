@@ -27,7 +27,7 @@ export default () => {
                     <div className={styles.details}>
                       <span>{Author}</span>
 
-                      <span>{published_at.substring(0, 10)}</span>
+                      <span>{published_at.subString(0, 10)}</span>
                     </div>
                     <div className={styles.imageContainer}>
                       <img
