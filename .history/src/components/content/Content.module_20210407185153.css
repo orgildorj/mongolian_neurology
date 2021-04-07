@@ -1,0 +1,25 @@
+/** @format */
+.contentContainer {
+  display: flex;
+}
+
+.subMenu {
+}
+
+.content {
+}
+
+.subSection {
+  border-top: 1px #eee solid;
+  padding: 1rem;
+}
+
+.subSection:first-child {
+  border-top: none;
+}
+
+.titleContainer {
+}
+
+.textContainer {
+}

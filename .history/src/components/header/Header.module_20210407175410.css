@@ -1,0 +1,17 @@
+/** @format */
+
+.header {
+  background: #204290;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerContainer {
+  display: flex;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

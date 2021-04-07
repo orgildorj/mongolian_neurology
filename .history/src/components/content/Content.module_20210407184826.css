@@ -1,0 +1,21 @@
+/** @format */
+.contentContainer {
+  display: flex;
+}
+
+.subMenu {
+}
+
+.subSection {
+  border-top: 1px black solid;
+}
+
+.subSection:first-child {
+  border-top: none;
+}
+
+.titleContainer {
+}
+
+.textContainer {
+}
