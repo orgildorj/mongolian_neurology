@@ -12,7 +12,7 @@ import Article from "./components/article/Article";
 function App() {
   return (
     <>
-      <Header />
+      <Header></Header>
       <Switch>
         <Route exact path='/'>
           <Newslist />

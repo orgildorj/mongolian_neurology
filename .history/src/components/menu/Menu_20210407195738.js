@@ -19,6 +19,7 @@ export default ({ clicked, setClicked }) => {
             </li>
             <li>
               <button onClick={clickHandler}>Нийгэмлэгийн тухай</button>
+              {clicked ? <SecondMenu /> : ""}
             </li>
           </ul>
         </div>

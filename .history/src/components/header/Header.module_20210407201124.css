@@ -25,13 +25,15 @@
   margin: 0 auto;
   width: 60%;
   font-weight: 500;
-  padding: 0;
 }
 
 .secondMenu ul li {
   margin: 0.5rem;
-  text-align: center;
-  width: auto;
+  border-right: 1px solid black;
+}
+
+.secondMenu li + li {
+  border-right: 1px solid black;
 }
 
 .secondMenu a {

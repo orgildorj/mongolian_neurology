@@ -15,14 +15,12 @@ function Header() {
       <div className={commonStyles.content}>
         <div className={styles.headerContainer}>
           <div className={styles.logoContainer}>
-            <Link to='/'>
-              <img src='http://localhost:3000/assets/logo.png' />
-            </Link>
+            <img src='http://localhost:3000/assets/logo.png' />
           </div>
           <Menu clicked={clicked} setClicked={setClicked} />
         </div>
+        {clicked ? <SecondMenu /> : ""}
       </div>
-      {clicked ? <SecondMenu /> : ""}
     </div>
   );
 }
@@ -33,9 +31,7 @@ const SecondMenu = () => {
   return (
     <div className={styles.secondMenu}>
       <ul>
-        <li>
-          <Link to='/administration'>Удирдлага, бүтэц</Link>
-        </li>
+        <li>Удирдлага, бүтэц</li>
         <li>
           <Link to='/membership'> Гишүүнээр элсэх</Link>
         </li>

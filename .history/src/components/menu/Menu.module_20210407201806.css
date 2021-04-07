@@ -40,13 +40,6 @@
   color: #e84747;
 }
 
-.menuList button {
-  background-color: #204290;
+.menuList ul li button {
   border: none;
-  color: white;
-  outline: none;
-}
-
-.menuList button:hover {
-  color: #e84747;
 }

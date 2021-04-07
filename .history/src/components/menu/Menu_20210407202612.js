@@ -18,7 +18,9 @@ export default ({ clicked, setClicked }) => {
               <Link to='/'>Мэдээ</Link>
             </li>
             <li>
-              <button onClick={clickHandler}>Нийгэмлэгийн тухай</button>
+              <button onMouseEnter={clickHandler} onMouseLeave={clickHandler}>
+                Нийгэмлэгийн тухай
+              </button>
             </li>
           </ul>
         </div>

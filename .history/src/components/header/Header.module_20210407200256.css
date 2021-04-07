@@ -15,7 +15,7 @@
 }
 
 .secondMenu {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 .secondMenu ul {
@@ -25,20 +25,4 @@
   margin: 0 auto;
   width: 60%;
   font-weight: 500;
-  padding: 0;
-}
-
-.secondMenu ul li {
-  margin: 0.5rem;
-  text-align: center;
-  width: auto;
-}
-
-.secondMenu a {
-  text-decoration: none;
-  color: #000;
-}
-
-.secondMenu a:hover {
-  color: #e84747;
 }

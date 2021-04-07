@@ -12,7 +12,7 @@ import Article from "./components/article/Article";
 function App() {
   return (
     <>
-      <Header />
+      <Header></Header>
       <Switch>
         <Route exact path='/'>
           <Newslist />
@@ -21,15 +21,13 @@ function App() {
         <Route exact path='/about' component={Content} />
         <Route exact path='/administration' component={Content} />
 
-        <Route
-          exact
-          path='/membership'
-          component={() => <Content type='membership_info' />}
-        />
+        <Route exact path='/membership'>
+          ><Content type='membership_info' />
+        </Route>
         <Route
           exact
           path='/subgroups'
-          component={() => <Content type='subgroups' />}
+          render={() => <Content type='subgroups' />}
         />
       </Switch>
       <Footer></Footer>

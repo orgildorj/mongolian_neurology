@@ -12,7 +12,7 @@ import Article from "./components/article/Article";
 function App() {
   return (
     <>
-      <Header />
+      <Header></Header>
       <Switch>
         <Route exact path='/'>
           <Newslist />
@@ -29,7 +29,7 @@ function App() {
         <Route
           exact
           path='/subgroups'
-          component={() => <Content type='subgroups' />}
+          render={() => <Content type='subgroups' />}
         />
       </Switch>
       <Footer></Footer>

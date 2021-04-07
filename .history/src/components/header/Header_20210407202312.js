@@ -15,7 +15,7 @@ function Header() {
       <div className={commonStyles.content}>
         <div className={styles.headerContainer}>
           <div className={styles.logoContainer}>
-            <Link to='/'>
+            <Link>
               <img src='http://localhost:3000/assets/logo.png' />
             </Link>
           </div>

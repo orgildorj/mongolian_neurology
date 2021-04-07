@@ -31,7 +31,10 @@
 .secondMenu ul li {
   margin: 0.5rem;
   text-align: center;
-  width: auto;
+}
+
+.secondMenu li + li {
+  content: " /";
 }
 
 .secondMenu a {

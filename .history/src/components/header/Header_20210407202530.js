@@ -19,7 +19,7 @@ function Header() {
               <img src='http://localhost:3000/assets/logo.png' />
             </Link>
           </div>
-          <Menu clicked={clicked} setClicked={setClicked} />
+          <Menu onMouseenter={clicked} setClicked={setClicked} />
         </div>
       </div>
       {clicked ? <SecondMenu /> : ""}
