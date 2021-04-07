@@ -36,7 +36,7 @@ const Article = () => {
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
 
-      <Carousel arrows slidesPerPage={2} centered>
+      <Carousel arrows slidesPerPage={2}>
         {images.length > 1
           ? images.map(({ url }) => <img src={`${Config.contentUrl}${url}`} />)
           : ""}

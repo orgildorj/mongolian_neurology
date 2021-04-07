@@ -31,12 +31,16 @@ const Article = () => {
   const images = article["Images"];
 
   return (
-    <div>
-      <div className={commonStyles.content}>
+    <div className={commonStyles.content}>
+      <div>
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
 
-      <Carousel arrows slidesPerPage={2} centered>
+      <Carousel
+        plugins={[
+          "arrows",
+          { resolve: slidesToShowPlugin, options: { numberOfSlides: 2 } },
+        ]}>
         {images.length > 1
           ? images.map(({ url }) => <img src={`${Config.contentUrl}${url}`} />)
           : ""}
@@ -47,7 +51,7 @@ const Article = () => {
         />
          */}
 
-      <div className={styles.textContainer} className={commonStyles.content}>
+      <div className={styles.textContainer}>
         <p>{article["Text"]}</p>
       </div>
     </div>

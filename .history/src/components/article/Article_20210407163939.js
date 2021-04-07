@@ -35,18 +35,31 @@ const Article = () => {
       <div className={commonStyles.content}>
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
-
-      <Carousel arrows slidesPerPage={2} centered>
-        {images.length > 1
-          ? images.map(({ url }) => <img src={`${Config.contentUrl}${url}`} />)
-          : ""}
-      </Carousel>
-      {/* <img
+      <div className={styles.imageContainer}>
+        <Carousel
+        // plugins={[
+        //   "infinite",
+        //   "arrows",
+        //   {
+        //     resolve: slidesToShowPlugin,
+        //     options: {
+        //       numberOfSlides: 2,
+        //     },
+        //   },
+        // ]}
+        >
+          {images.length
+            ? images.map(({ url }) => (
+                <img src={`${Config.contentUrl}${url}`} />
+              ))
+            : ""}
+        </Carousel>
+        {/* <img
           src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
           alt='image'
         />
          */}
-
+      </div>
       <div className={styles.textContainer} className={commonStyles.content}>
         <p>{article["Text"]}</p>
       </div>

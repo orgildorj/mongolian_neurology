@@ -14,7 +14,6 @@ const Menu = () => (
         </li>
         <li>
           <Link to='/about'>Нийгэмлэгийн тухай</Link>
-          <Menu_Layer_2 />
         </li>
       </ul>
     </div>
