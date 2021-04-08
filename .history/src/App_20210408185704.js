@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/header/Header";
-import MultiContent from "./components/multiContent/MultiContent";
-import SingleContent from "./components/singleContent/SingleContent";
+import Content from "./components/multContent/MultContent";
 import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 import Newslist from "./components/newslist/Newslist";
 import Article from "./components/article/Article";
 
@@ -18,22 +18,24 @@ function App() {
           <Newslist />
         </Route>
         <Route exact path='/article/:id' component={Article} />
-        <Route exact path='/about' component={MultiContent} />
+        <Route exact path='/about' component={Content} />
 
         <Route
           exact
           path='/membership'
-          component={() => <MultiContent type='membership_info' />}
+          component={() => <Content type='membership_info' hasSubMenu={true} />}
         />
         <Route
           exact
           path='/subgroups'
-          component={() => <MultiContent type='subgroups' />}
+          component={() => <Content type='subgroups' hasSubMenu={true} />}
         />
         <Route
           exact
           path='/administration'
-          component={() => <SingleContent type='administration' />}
+          component={() => (
+            <Content type='administrations' hasSubMenu={false} />
+          )}
         />
       </Switch>
       <Footer></Footer>

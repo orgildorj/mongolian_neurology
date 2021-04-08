@@ -3,19 +3,25 @@
   display: flex;
 }
 
+.subMenu {
+  flex: 1;
+}
+
+.content {
+  flex: 3;
+}
+
 .subMenu ul li + li {
   margin-top: 10px;
 }
 
 .subMenu ul {
   list-style: none;
+  position: fixed;
 }
 
 .subMenu li:hover {
   color: #e84747;
-}
-
-.content {
 }
 
 .subSection {

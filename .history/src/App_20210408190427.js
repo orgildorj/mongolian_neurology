@@ -33,7 +33,7 @@ function App() {
         <Route
           exact
           path='/administration'
-          component={() => <SingleContent type='administration' />}
+          component={() => <SingleContent type='administrations' />}
         />
       </Switch>
       <Footer></Footer>

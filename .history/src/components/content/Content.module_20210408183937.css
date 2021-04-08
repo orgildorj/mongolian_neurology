@@ -1,0 +1,39 @@
+/** @format */
+.contentContainer {
+  display: flex;
+}
+
+.subMenu {
+  flex: 1;
+}
+
+.content {
+  flex: 3;
+}
+
+.subMenu ul li + li {
+  margin-top: 10px;
+}
+
+.subMenu ul {
+  list-style: none;
+  position: fixed;
+  padding: initial;
+}
+
+.subMenu li {
+  padding: 1rem;
+}
+
+.subMenu li:hover {
+  color: #e84747;
+}
+
+.subSection {
+  border-top: 1px #eee solid;
+  padding: 1rem;
+}
+
+.subSection:first-child {
+  border-top: none;
+}

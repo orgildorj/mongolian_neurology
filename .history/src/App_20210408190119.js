@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/header/Header";
-import MultiContent from "./components/multiContent/MultiContent";
-import SingleContent from "./components/singleContent/SingleContent";
+import MultiContent from "./components/multContent/MultContent";
 import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 import Newslist from "./components/newslist/Newslist";
 import Article from "./components/article/Article";
 
@@ -18,7 +18,7 @@ function App() {
           <Newslist />
         </Route>
         <Route exact path='/article/:id' component={Article} />
-        <Route exact path='/about' component={MultiContent} />
+        <Route exact path='/about' component={Content} />
 
         <Route
           exact
@@ -33,7 +33,7 @@ function App() {
         <Route
           exact
           path='/administration'
-          component={() => <SingleContent type='administration' />}
+          component={() => <MultiContent type='administrations' />}
         />
       </Switch>
       <Footer></Footer>

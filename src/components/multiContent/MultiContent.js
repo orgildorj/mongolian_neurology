@@ -5,20 +5,12 @@ import { fetchMemInfo } from "../../modules/membership_info/MembershipService";
 import { fetchGroups } from "../../modules/subgroups/SubgroupService";
 
 import commonStyles from "../Common.module.css";
-import styles from "./Content.module.css";
+import styles from "./MultiContent.module.css";
 
-function Content({ type }) {
+export default ({ type }) => {
   const [contentData, setContentData] = useState([]);
 
-  if (type === "membership_info") {
-    if (contentData.length === 0) {
-      fetchMemInfo().then((data) => setContentData(data));
-    }
-  } else if (type === "subgroups") {
-    if (contentData.length === 0) {
-      fetchGroups().then((data) => setContentData(data));
-    }
-  }
+  fetchData(contentData, setContentData, type);
 
   return (
     <div className={commonStyles.content}>
@@ -51,6 +43,16 @@ function Content({ type }) {
       </div>
     </div>
   );
-}
+};
 
-export default Content;
+const fetchData = (contentData, setContentData, type) => {
+  if (type === "membership_info") {
+    if (contentData.length === 0) {
+      fetchMemInfo().then((data) => setContentData(data));
+    }
+  } else if (type === "subgroups") {
+    if (contentData.length === 0) {
+      fetchGroups().then((data) => setContentData(data));
+    }
+  }
+};
