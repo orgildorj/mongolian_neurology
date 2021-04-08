@@ -17,11 +17,8 @@
 /* Second Menu */
 
 .secondMenu {
-  background: transparent;
-}
-
-.notShow {
-  visibility: hidden;
+  background-color: rgb(255, 255, 255);
+  display: none;
 }
 
 .secondMenu ul {

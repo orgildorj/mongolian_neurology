@@ -30,46 +30,35 @@ const Article = () => {
 
   const images = article["Images"];
 
-  const ImageContainer = () => (
-    <>
-      {images.length ? (
-        images.length > 1 ? (
-          <div className={styles.multipImgContainer}>
-            <Carousel arrows slidesPerPage={2}>
-              {images.length > 1
-                ? images.map(({ url }) => (
-                    <img src={`${Config.contentUrl}${url}`} />
-                  ))
-                : ""}
-            </Carousel>
-          </div>
-        ) : (
-          <div className={styles.singleImgContainer}>
-            <img
-              src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-              alt='image'
-            />
-          </div>
-        )
-      ) : (
-        ""
-      )}
-    </>
-  );
-
   return (
     <div className={styles.articleContainer}>
-      <div className={styles.imageContainer}>
-        <ImageContainer />
-      </div>
       <div className={commonStyles.content}>
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
+
+      <Carousel arrows slidesPerPage={2}>
+        {images.length > 1
+          ? images.map(({ url }) => <img src={`${Config.contentUrl}${url}`} />)
+          : ""}
+      </Carousel>
+      {/* <img
+          src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
+          alt='image'
+        />
+         */}
+
       <div className={styles.textContainer} className={commonStyles.content}>
         <p>{article["Text"]}</p>
       </div>
     </div>
   );
+  // <div className={commonStyles.content}>
+  //   <h1 className={styles.title}>{article.Title}</h1>
+
+  //   {/* <img src={`${Config.contentUrl}${image.url}`} /> */}
+
+  //   <p>{article.text}</p>
+  // </div>
 };
 
 export default Article;

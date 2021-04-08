@@ -31,40 +31,37 @@ const Article = () => {
   const images = article["Images"];
 
   const ImageContainer = () => (
-    <>
+    <div className={styles.imageContainer}>
       {images.length ? (
         images.length > 1 ? (
-          <div className={styles.multipImgContainer}>
-            <Carousel arrows slidesPerPage={2}>
-              {images.length > 1
-                ? images.map(({ url }) => (
-                    <img src={`${Config.contentUrl}${url}`} />
-                  ))
-                : ""}
-            </Carousel>
-          </div>
+          <Carousel arrows slidesPerPage={2}>
+            {images.length > 1
+              ? images.map(({ url }) => (
+                  <img src={`${Config.contentUrl}${url}`} />
+                ))
+              : ""}
+          </Carousel>
         ) : (
-          <div className={styles.singleImgContainer}>
-            <img
-              src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-              alt='image'
-            />
-          </div>
+          <img
+            src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
+            alt='image'
+            className={styles.singleImg}
+          />
         )
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 
   return (
     <div className={styles.articleContainer}>
-      <div className={styles.imageContainer}>
-        <ImageContainer />
-      </div>
       <div className={commonStyles.content}>
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
+      <div></div>
+      <ImageContainer />
+
       <div className={styles.textContainer} className={commonStyles.content}>
         <p>{article["Text"]}</p>
       </div>

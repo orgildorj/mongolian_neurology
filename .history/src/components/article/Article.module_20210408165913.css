@@ -8,8 +8,12 @@
 .imageContainer {
 }
 
+.multipImgContainer {
+  width: 60%;
+}
+
 .multipImgContainer img {
-  width: 80%;
+  width: 90%;
 }
 
 .singleImgContainer {

@@ -17,11 +17,7 @@
 /* Second Menu */
 
 .secondMenu {
-  background: transparent;
-}
-
-.notShow {
-  visibility: hidden;
+  background-color: rgb(255, 255, 255);
 }
 
 .secondMenu ul {
@@ -38,6 +34,11 @@
   margin: 0.5rem;
   text-align: center;
   width: auto;
+}
+
+.secondMenu li + li:before {
+  content: "|";
+  padding: 0 10px;
 }
 
 .secondMenu a {

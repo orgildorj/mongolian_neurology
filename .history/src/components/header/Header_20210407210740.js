@@ -45,9 +45,6 @@ const SecondMenu = ({ show, setShow }) => {
           <li>
             <Link to='/subgroups'>Дэд бүлгүүд</Link>
           </li>
-          <li>
-            <Link to='/contact'>Холбоо барих</Link>
-          </li>
         </ul>
       </div>
     </div>

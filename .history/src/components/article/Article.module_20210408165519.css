@@ -5,16 +5,10 @@
   border-bottom: 1px solid rgb(186, 186, 186);
 }
 
+.articleContainer img {
+}
+
 .imageContainer {
-}
-
-.multipImgContainer img {
-  width: 80%;
-}
-
-.singleImgContainer {
-  width: 60%;
-  margin: 0 auto;
 }
 
 .singleImgContainer img {

@@ -9,12 +9,11 @@
 }
 
 .multipImgContainer img {
-  width: 80%;
+  width: 100%;
 }
 
 .singleImgContainer {
   width: 60%;
-  margin: 0 auto;
 }
 
 .singleImgContainer img {

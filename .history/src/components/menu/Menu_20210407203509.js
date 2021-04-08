@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import styles from "./Menu.module.css";
 import { Link } from "react-router-dom";
 
-export default ({ show, setShow }) => {
+export default ({ clicked, setClicked }) => {
   const clickHandler = () => {
-    setShow(!show);
+    setClicked(!clicked);
   };
 
   return (
@@ -17,8 +17,10 @@ export default ({ show, setShow }) => {
             <li>
               <Link to='/'>Мэдээ</Link>
             </li>
-            <li onMouseEnter={clickHandler}>
-              <Link to='/about'>Нийгэмлэгийн тухай</Link>
+            <li>
+              <Link to='/about' onMouseEnter={clickHandler}>
+                Нийгэмлэгийн тухай
+              </Link>
             </li>
           </ul>
         </div>

@@ -59,11 +59,11 @@ const Article = () => {
 
   return (
     <div className={styles.articleContainer}>
-      <div className={styles.imageContainer}>
-        <ImageContainer />
-      </div>
       <div className={commonStyles.content}>
         <h1 className={styles.title}>{article["Title"]}</h1>
+      </div>
+      <div className={styles.imageContainer}>
+        <ImageContainer />
       </div>
       <div className={styles.textContainer} className={commonStyles.content}>
         <p>{article["Text"]}</p>

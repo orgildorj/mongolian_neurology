@@ -1,0 +1,18 @@
+/** @format */
+
+.title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(186, 186, 186);
+}
+
+.articleContainer img {
+  width: 90%;
+}
+
+.imageContainer {
+  width: 60%;
+}
+
+.singleImg img {
+  width: 40%;
+}

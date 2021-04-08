@@ -24,7 +24,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <SecondMenu show={show} />
+      {show ? <SecondMenu show={show} /> : ""}
     </>
   );
 }
@@ -44,9 +44,6 @@ const SecondMenu = ({ show, setShow }) => {
           </li>
           <li>
             <Link to='/subgroups'>Дэд бүлгүүд</Link>
-          </li>
-          <li>
-            <Link to='/contact'>Холбоо барих</Link>
           </li>
         </ul>
       </div>

@@ -17,10 +17,10 @@
 /* Second Menu */
 
 .secondMenu {
-  background: transparent;
+  background-color: rgb(255, 255, 255);
 }
 
-.notShow {
+.secondMenu .notShow {
   visibility: hidden;
 }
 
