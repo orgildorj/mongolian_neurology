@@ -22,7 +22,7 @@ export default () => {
 
   return (
     <div className={commonStyles.content}>
-      <LatestNews articles={articles} latestArticle={latestArticle} />
+      <LatestNews />
       <div className={styles.newslistContainer}>
         <ul>
           {articles.length
