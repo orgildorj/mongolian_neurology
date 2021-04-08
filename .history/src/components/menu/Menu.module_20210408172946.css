@@ -2,11 +2,12 @@
 
 .menuContainer {
   display: flex;
+
   align-items: center;
 }
 
-.menuContainer ul {
-  list-style: none;
+.menuList {
+  justify-content: flex-start;
 }
 
 .mainMenu {
@@ -20,61 +21,44 @@
   justify-content: space-between;
 }
 
-.mainMenu > li {
-  margin: 1rem;
+.hasSubMenu {
 }
 
-.menuContainer a {
+/* .menuList ul li {
+  margin: 1rem;
+  width: auto;
+  flex: 1;
+  padding: 0;
+  text-align: center;
+} */
+
+.menuList a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
 
-.menuContainer a:hover {
+.menuList a:hover {
   color: #e84747;
 }
 
-.menuContainer button {
+.menuList button {
   background-color: #204290;
   border: none;
   color: white;
   outline: none;
 }
 
-.menuContainer button:hover {
+.menuList button:hover {
   color: #e84747;
 }
 
 .hasSubMenu {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
-.secondMenu {
-  position: absolute;
-  top: 5.4rem;
-  left: 0;
-  z-index: 1;
-  background: cornsilk;
-  width: 100%;
-}
-
-.secondMenu ul {
+.hasSubMenu ul {
   display: flex;
   flex-direction: row;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.secondMenu li {
-  margin: 0.9rem;
-}
-
-.secondMenu a {
-  color: black;
-}
-
-.notShow {
-  display: none;
+  position: absolute;
 }

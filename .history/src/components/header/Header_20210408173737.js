@@ -29,3 +29,26 @@ function Header() {
 }
 
 export default Header;
+
+const SecondMenu = ({ show, setShow }) => {
+  return (
+    <div className={show ? styles.show : styles.notShow}>
+      <div className={styles.secondMenu}>
+        <ul>
+          <li>
+            <Link to='/administration'>Удирдлага, бүтэц</Link>
+          </li>
+          <li>
+            <Link to='/membership'> Гишүүнээр элсэх</Link>
+          </li>
+          <li>
+            <Link to='/subgroups'>Дэд бүлгүүд</Link>
+          </li>
+          <li>
+            <Link to='/contact'>Холбоо барих</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,50 @@
+/** @format */
+
+.header {
+  background: #204290;
+}
+
+.headerContainer {
+  display: flex;
+}
+
+.logoContainer {
+  flex: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Second Menu */
+
+.secondMenu {
+  background: transparent;
+}
+
+.notShow {
+  visibility: hidden;
+}
+
+.secondMenu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  font-weight: 500;
+  padding: 0;
+}
+
+.secondMenu ul li {
+  margin: 0.5rem;
+  text-align: center;
+  width: auto;
+}
+
+.secondMenu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.secondMenu a:hover {
+  color: #e84747;
+}

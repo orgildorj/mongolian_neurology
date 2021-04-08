@@ -23,22 +23,20 @@ export default ({ show, setShow }) => {
               Нийгэмлэгийн тухай
             </Link>
             <div className={show ? "" : styles.notShow}>
-              <div className={styles.secondMenu}>
-                <ul>
-                  <li>
-                    <Link to='/administration'>Удирдлага, бүтэц</Link>
-                  </li>
-                  <li>
-                    <Link to='/membership'> Гишүүнээр элсэх</Link>
-                  </li>
-                  <li>
-                    <Link to='/subgroups'>Дэд бүлгүүд</Link>
-                  </li>
-                  <li>
-                    <Link to='/contact'>Холбоо барих</Link>
-                  </li>
-                </ul>
-              </div>
+              <ul className={styles.secondMenu}>
+                <li>
+                  <Link to='/administration'>Удирдлага, бүтэц</Link>
+                </li>
+                <li>
+                  <Link to='/membership'> Гишүүнээр элсэх</Link>
+                </li>
+                <li>
+                  <Link to='/subgroups'>Дэд бүлгүүд</Link>
+                </li>
+                <li>
+                  <Link to='/contact'>Холбоо барих</Link>
+                </li>
+              </ul>
             </div>
           </li>
         </ul>

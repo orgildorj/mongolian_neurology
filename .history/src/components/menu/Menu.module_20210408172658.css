@@ -1,0 +1,55 @@
+/** @format */
+
+.menuContainer {
+  display: flex;
+
+  align-items: center;
+  position: static;
+}
+
+.menuList {
+  justify-content: flex-start;
+}
+
+.mainMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  flex: 2;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.hasSubMenu {
+}
+
+/* .menuList ul li {
+  margin: 1rem;
+  width: auto;
+  flex: 1;
+  padding: 0;
+  text-align: center;
+} */
+
+.menuList a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menuList a:hover {
+  color: #e84747;
+}
+
+.menuList button {
+  background-color: #204290;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.menuList button:hover {
+  color: #e84747;
+}

@@ -23,7 +23,7 @@ export default ({ show, setShow }) => {
               Нийгэмлэгийн тухай
             </Link>
             <div className={show ? "" : styles.notShow}>
-              <div className={styles.secondMenu}>
+              <div </div>>
                 <ul>
                   <li>
                     <Link to='/administration'>Удирдлага, бүтэц</Link>

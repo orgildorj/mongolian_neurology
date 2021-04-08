@@ -55,6 +55,7 @@
   top: 5.4rem;
   left: 0;
   z-index: 1;
+  padding: 0;
   background: cornsilk;
   width: 100%;
 }
@@ -62,9 +63,6 @@
 .secondMenu ul {
   display: flex;
   flex-direction: row;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
 }
 
 .secondMenu li {

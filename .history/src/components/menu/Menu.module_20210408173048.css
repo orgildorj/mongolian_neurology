@@ -5,10 +5,6 @@
   align-items: center;
 }
 
-.menuContainer ul {
-  list-style: none;
-}
-
 .mainMenu {
   list-style: none;
   margin: 0;
@@ -20,9 +16,16 @@
   justify-content: space-between;
 }
 
-.mainMenu > li {
-  margin: 1rem;
+.hasSubMenu {
 }
+
+/* .menuList ul li {
+  margin: 1rem;
+  width: auto;
+  flex: 1;
+  padding: 0;
+  text-align: center;
+} */
 
 .menuContainer a {
   color: white;
@@ -46,35 +49,11 @@
 }
 
 .hasSubMenu {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
-.secondMenu {
-  position: absolute;
-  top: 5.4rem;
-  left: 0;
-  z-index: 1;
-  background: cornsilk;
-  width: 100%;
-}
-
-.secondMenu ul {
+.hasSubMenu ul {
   display: flex;
   flex-direction: row;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.secondMenu li {
-  margin: 0.9rem;
-}
-
-.secondMenu a {
-  color: black;
-}
-
-.notShow {
-  display: none;
+  position: absolute;
 }

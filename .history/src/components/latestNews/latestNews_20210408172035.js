@@ -12,7 +12,7 @@ export default ({ articles }) => {
         infinite
         centered
         keepDirectionWhenDragging
-        autoPlay={5000}
+        autoPlay={4000}
         animationSpeed={2000}>
         {articles.length
           ? articles.slice(0, 2).map(({ id, Title, Images }) => (

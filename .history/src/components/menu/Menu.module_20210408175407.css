@@ -51,30 +51,9 @@
 }
 
 .secondMenu {
-  position: absolute;
-  top: 5.4rem;
-  left: 0;
-  z-index: 1;
-  background: cornsilk;
-  width: 100%;
-}
-
-.secondMenu ul {
   display: flex;
   flex-direction: row;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.secondMenu li {
-  margin: 0.9rem;
-}
-
-.secondMenu a {
+  position: absolute;
+  top: 5rem;
   color: black;
-}
-
-.notShow {
-  display: none;
 }
