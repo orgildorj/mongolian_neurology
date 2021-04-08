@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticle } from "../../modules/article/ArticleService";
 import Config from "../../Config";
-import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 import commonStyles from "../Common.module.css";
@@ -56,15 +56,17 @@ const Article = () => {
   );
 
   return (
-    <div className={styles.articleContainer}>
-      <div className={styles.imageContainer}>
-        <ImageContainer />
-      </div>
-      <div className={commonStyles.content}>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
+    <div className={commonStyles.content}>
+      <div className={styles.articleContainer}>
+        <div className={styles.imageContainer}>
+          <ImageContainer />
+        </div>
+        <div>
+          <h1 className={styles.title}>{article["Title"]}</h1>
+        </div>
+        <div className={styles.textContainer}>
+          <p>{article["Text"]}</p>
+        </div>
       </div>
     </div>
   );

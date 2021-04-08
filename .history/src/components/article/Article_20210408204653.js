@@ -63,7 +63,7 @@ const Article = () => {
       <div className={commonStyles.content}>
         <h1 className={styles.title}>{article["Title"]}</h1>
       </div>
-      <div className={styles.textContainer}>
+      <div className={styles.textContainer} className={commonStyles.content}>
         <p>{article["Text"]}</p>
       </div>
     </div>
