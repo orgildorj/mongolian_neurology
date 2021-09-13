@@ -1,11 +1,14 @@
+/** @format */
+
 import React, { useState, useEffect } from "react";
 import { fetchAdm } from "../../modules/administration/AdministrService";
 import { fetchForeignAss } from "../../modules/foreign_assemblies/ForeignAssService";
+import { fetchContact } from "../../modules/contact/ContactService";
 
 import commonStyles from "../Common.module.css";
-import styles from "./SingleContent.module.css";
+import styles from "./Content.module.css";
 
-export default ({ type }) => {
+const Content = ({ type }) => {
   const [contentData, setContentData] = useState({
     id: 0,
     Title: "",
@@ -40,6 +43,12 @@ const fetchData = (contentData, setContentData, type) => {
       fetchForeignAss().then((data) => {
         setContentData(data);
       });
+    } else if (type === "contact") {
+      fetchContact().then((data) => {
+        setContentData(data);
+      });
     }
   }
 };
+
+export default Content;

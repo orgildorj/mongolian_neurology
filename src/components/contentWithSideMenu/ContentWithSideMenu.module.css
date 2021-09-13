@@ -3,28 +3,32 @@
   display: flex;
 }
 
-.subMenu {
-  flex: 1;
+.sideMenu {
+  flex: 2;
 }
 
 .content {
-  flex: 3;
+  flex: 5;
 }
 
-.subMenu ul li + li {
-  margin-top: 10px;
-}
-
-.subMenu ul {
+.sideMenu ul {
   list-style: none;
   position: fixed;
   padding: initial;
+  margin-top: 1rem;
 }
 
-.subMenu li {
+.sideMenu ul li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.subMenu li:hover {
+.sideMenu ul li + li {
+  border-top: thin solid rgba(0, 0, 0, 0.157);
+}
+
+.sideMenu li:hover {
   color: #e84747;
 }
 

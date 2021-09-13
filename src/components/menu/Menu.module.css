@@ -3,75 +3,29 @@
 .menuContainer {
   display: flex;
   align-items: center;
+  border-top: solid 1px rgb(255 255 255 / 27%);
 }
 
-.menuContainer ul {
-  list-style: none;
+nav {
+  display: flex;
 }
 
-.mainMenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  flex-direction: row;
-  flex: 2;
-  white-space: nowrap;
-  justify-content: space-between;
+nav > div {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.mainMenu > li {
-  margin: 1rem;
-}
-
-.menuContainer a {
+a {
   color: white;
   text-decoration: none;
-  text-align: center;
+  font-weight: 400;
 }
 
-.menuContainer a:hover {
+a:hover {
   color: #e84747;
 }
 
-.menuContainer button {
-  background-color: #204290;
-  border: none;
-  color: white;
-  outline: none;
-}
-
-.menuContainer button:hover {
-  color: #e84747;
-}
-
-.hasSubMenu {
-  display: flex;
-  flex-direction: column;
-}
-
-.secondMenu {
-  position: absolute;
-  top: 5.4rem;
-  left: 0;
-  z-index: 1;
-  background: #204290;
-  width: 100%;
-  border-top: 1px #5b75b1 solid;
-}
-
-.secondMenu ul {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.secondMenu li {
-  margin: 0.9rem;
-}
-
-.secondMenu a {
-  color: white;
+.menuContainer p {
+  color: rgb(255 255 255 / 27%);
 }

@@ -5,9 +5,9 @@ import { fetchMemInfo } from "../../modules/membership_info/MembershipService";
 import { fetchGroups } from "../../modules/subgroups/SubgroupService";
 
 import commonStyles from "../Common.module.css";
-import styles from "./MultiContent.module.css";
+import styles from "./ContentWithSideMenu.module.css";
 
-export default ({ type }) => {
+const ContentWithSideMenu = ({ type }) => {
   const [contentData, setContentData] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default ({ type }) => {
   return (
     <div className={commonStyles.content}>
       <div className={styles.contentContainer}>
-        <div className={styles.subMenu}>
+        <div className={styles.sideMenu}>
           <ul>
             {contentData.length
               ? contentData.map(({ id, Title }) => (
@@ -58,3 +58,5 @@ const fetchData = (contentData, setContentData, type) => {
     }
   }
 };
+
+export default ContentWithSideMenu;
