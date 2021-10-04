@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticle } from "../../modules/article/ArticleService";
-import Config from "../../Config";
-import Carousel from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-import commonStyles from "../Common.module.css";
-import styles from "./Article.module.css";
+import ImageSlider from "./ImageSlider";
+
+import "./Article.scss";
 
 const Article = () => {
   const { id } = useParams();
@@ -26,48 +26,19 @@ const Article = () => {
         setArticle(data);
       });
     }
-  });
+  }, []);
 
   const images = article["Images"];
 
-  const ImageContainer = () => (
-    <>
-      {images.length ? (
-        images.length > 1 ? (
-          <div className={styles.multipImgContainer}>
-            <Carousel arrows slidesPerPage={2}>
-              {images.length > 1
-                ? images.map(({ url }) => (
-                    <img src={`${Config.contentUrl}${url}`} />
-                  ))
-                : ""}
-            </Carousel>
-          </div>
-        ) : (
-          <div className={styles.singleImgContainer}>
-            <img
-              src={`${Config.contentUrl}${images.length ? images[0].url : ""}`}
-              alt='image'
-            />
-          </div>
-        )
-      ) : (
-        ""
-      )}
-    </>
-  );
-
   return (
-    <div className={styles.articleContainer}>
-      <div className={styles.imageContainer}>
-        <ImageContainer />
-      </div>
-      <div className={commonStyles.content}>
-        <h1 className={styles.title}>{article["Title"]}</h1>
-      </div>
-      <div className={styles.textContainer}>
-        <p>{article["Text"]}</p>
-      </div>
+    <div className='article-container'>
+      <ImageSlider images={images} />
+
+      <h1>{article["Title"]}</h1>
+      <hr />
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        {article["Text"]}
+      </ReactMarkdown>
     </div>
   );
 };

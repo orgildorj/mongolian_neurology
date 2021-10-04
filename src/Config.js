@@ -1,5 +1,5 @@
 /** @format */
 
 export default {
-  contentUrl: "http://localhost:1338",
+  contentUrl: "http://localhost:1337",
 };
