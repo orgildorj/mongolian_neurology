@@ -31,7 +31,7 @@ export const AboutData = {
 export const InfoData = {
   type: "info",
   title: "Мэдээлэл",
-  path: "/",
+  path: "/news",
   items: [
     // { title: "Зургийн сан", path: "/" },
     // { title: "Холбоосууд", path: "/" },

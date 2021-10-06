@@ -21,10 +21,11 @@ function Home() {
     if (articles.length === 0) {
       fetchArticles().then((data) => {
         setLatestArticle(data[data.length - 1]);
-        setArticles(data.reverse().splice(1, data.length - 1));
+        setArticles(data.reverse().splice(1, 3));
+        console.log(data.reverse().splice(1, 4));
       });
     }
-  });
+  }, []);
 
   return (
     <div className='home-container'>

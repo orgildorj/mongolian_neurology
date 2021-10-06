@@ -19,7 +19,7 @@ const LatestNews = ({ latestArticle }) => {
       ) : (
         ""
       )}
-      <h1>Мэдрэлийн мэргэшлийн зэрэг горилогчдод - 2021</h1>
+      <h1>{latestArticle["Title"]}</h1>
       <ReactMarkdown>
         {latestArticle["Text"].substr(0, 200) + "..."}
       </ReactMarkdown>

@@ -8,6 +8,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Article from "./components/article/Article";
 import Home from "./components/home/Home";
+import News from "./components/news/News";
 
 // NormalContent
 import Achievement from "./components/pages/NormalContent/Achievement";
@@ -49,7 +50,9 @@ function App() {
           <Route exact path='/about/achievement' component={Achievement} />
 
           {/* Info */}
-          <Route
+          <Route exact path='/news' component={News} />
+          <Route exact path='/news/page/:id' component={News} />
+          {/* <Route
             exact
             path='/info/medical-organizations'
             component={MedicalOrganizations}
@@ -58,7 +61,7 @@ function App() {
             exact
             path='/info/foreign-assemblies'
             component={ForeignAssemblies}
-          />
+          /> */}
 
           {/* Contact */}
           <Route exact path='/contact' component={Contact} />
