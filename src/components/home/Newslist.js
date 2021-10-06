@@ -34,6 +34,9 @@ const Newslist = ({ articles }) => {
                 </li>
               ))
           : ""}
+        {/* <li className='continue'>
+          <Link to='/news'>Үргэлжлэл</Link>
+        </li> */}
       </ul>
     </div>
   );

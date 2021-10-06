@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import Navbar from "./Navbar";
 
@@ -17,14 +17,14 @@ function Header() {
   useEffect(() => {
     if (sidebar) {
       gsap.to(".navbar", {
-        right: 0,
         duration: 1,
+        right: 0,
         ease: "power1.inOut",
       });
     } else {
       gsap.to(".navbar", {
         duration: 1,
-        right: "-100%",
+        right: "-150%",
         ease: "power1.inOut",
       });
     }
@@ -33,19 +33,6 @@ function Header() {
   const clickHandler = () => {
     setSidebar(!sidebar);
   };
-
-  // document.onclick = function (e) {
-  //   if (
-  //     window.innerWidth <= 960 &&
-  //     sidebar &&
-  //     e.target.id !== "navbar" &&
-  //     e.target.id !== "menu-btn"
-  //   ) {
-  //     debugger;
-  //     console.log(e.target.id);
-  //     setSidebar(false);
-  //   }
-  // };
 
   return (
     <div className='header'>
@@ -61,7 +48,11 @@ function Header() {
         <Navbar closeSidebar={clickHandler} />
       </div>
       <div className='top-right'>
-        <FacebookIcon style={{ color: "white" }} className='fb-icon' />
+        <Link
+          to={{ pathname: "https://www.facebook.com/mongolianneurology/" }}
+          target='_blank'>
+          <FacebookIcon style={{ color: "white" }} className='fb-icon' />
+        </Link>
         <Link to='/en'>EN</Link>
       </div>
     </div>

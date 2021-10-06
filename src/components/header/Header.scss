@@ -47,6 +47,8 @@ $red: #e84747;
         padding-right: 1rem;
       }
       a {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: white;
         font-size: medium;

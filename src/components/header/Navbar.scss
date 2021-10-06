@@ -10,7 +10,9 @@
     top: 0;
     background-color: $blue;
     height: 100%;
-    width: 60%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 
     button {
       border: none;
@@ -22,6 +24,10 @@
       padding: 0;
       width: 100%;
 
+      .close-btn {
+        padding-left: 1.5rem;
+      }
+
       .nav-item {
         width: 100%;
 
@@ -32,8 +38,31 @@
         a {
           text-decoration: none;
           color: white;
-          font-size: medium;
+          font-size: 1.5rem;
         }
+      }
+    }
+    .fb-en {
+      background-color: #0c5ba5;
+      height: 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      a {
+        display: flex;
+        align-items: center;
+        height: 50%;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        &:hover {
+          color: $red;
+        }
+      }
+
+      .fb-icon {
+        font-size: 1.4rem;
       }
     }
   }
@@ -44,6 +73,7 @@
   .navbar {
     display: flex;
     align-items: center;
+
     height: 100%;
     button {
       border: 0;
@@ -79,6 +109,10 @@
           }
         }
       }
+    }
+
+    .fb-en {
+      display: none;
     }
   }
 }

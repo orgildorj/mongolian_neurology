@@ -2,8 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import gsap from "gsap";
 
 import CloseIcon from "@material-ui/icons/Close";
+import FacebookIcon from "@material-ui/icons/Facebook";
+
 import { AboutData, InfoData, ContactData } from "./MenuData";
 import $ from "jquery";
 import Dropdown from "./Dropdown";
@@ -32,6 +35,11 @@ const Navbar = (props) => {
       $(".nav-item.about > button").css("border-bottom", "none");
       $(".nav-item.info > button").css("border-bottom", "none");
     }
+    gsap.to(".navbar", {
+      duration: 1,
+      right: "-100%",
+      ease: "power1.inOut",
+    });
   }, [location]);
 
   return (
@@ -47,6 +55,15 @@ const Navbar = (props) => {
         <NavItem data={InfoData} open={openB} />
         <NavItem data={ContactData} />
       </ul>
+
+      <div className='fb-en'>
+        <Link
+          to={{ pathname: "https://www.facebook.com/mongolianneurology/" }}
+          target='_blank'>
+          <FacebookIcon style={{ color: "white" }} className='fb-icon' />
+        </Link>
+        <Link to='/en'>EN</Link>
+      </div>
     </nav>
   );
 };
