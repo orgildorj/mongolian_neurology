@@ -1,14 +1,10 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-
-import { fetchArticles } from "../../modules/news/NewsService";
+import { fetchArticles } from "../../../modules/news/NewsService";
 import ReactPaginate from "react-paginate";
-import Pagination from "./Pagination";
-import Posts from "./Posts";
 import "./News.scss";
-import { Route, useParams } from "react-router";
-import Config from "../../Config";
+import Config from "../../../Config";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 

@@ -1,8 +1,8 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { fetchMemInfo } from "../../../modules/membership_info/MembershipService";
-import ContentWithSideMenu from "./ContentWithSideMenu";
+import { fetchMemInfo } from "../../modules/membership_info/MembershipService";
+import ContentWithSideMenu from "../ContentWithSideMenu/ContentWithSideMenu";
 
 function Membership() {
   const [membershipInfos, setMembershipInfos] = useState([]);

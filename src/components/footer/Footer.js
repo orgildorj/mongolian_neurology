@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { fetchContact } from "../../modules/contact/ContactService";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import NormalContent from "../pages/NormalContent/NormalContent";
 
 import "./Footer.scss";
 

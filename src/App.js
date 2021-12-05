@@ -5,15 +5,15 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import Article from "./components/article/Article";
+import NewsArticle from "./components/pages/newsArticle/NewsArticle";
 import Home from "./components/home/Home";
-import News from "./components/news/News";
+import News from "./components/pages/news/News";
 
 // NormalContent
 // Content With SideMenu
-import Membership from "./components/pages/ContentWithSideMenu/Membership";
-import EnglishPage from "./components/pages/ContentWithSideMenu/EnglishPage";
-import About from "./components/pages/ContentWithSideMenu/About";
+import Membership from "./components/pages/Membership";
+import EnglishPage from "./components/pages/EnglishPage";
+import About from "./components/pages/About";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Switch>
           {/* Article */}
           <Route exact path='/' component={Home} />
-          <Route exact path='/article/:id' component={Article} />
+          <Route exact path='/article/:id' component={NewsArticle} />
 
           {/* About */}
           <Route exact path='/about' component={About} />

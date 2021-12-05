@@ -1,10 +1,8 @@
-/** @format */
-
 import React, { useEffect, useState } from "react";
-import { fetchEnglishPage } from "../../../modules/englishPages/EnglishPagesService";
-import ContentWithSideMenu from "./ContentWithSideMenu";
+import { fetchAbout } from "../../modules/about/AboutService";
+import ContentWithSideMenu from "../ContentWithSideMenu/ContentWithSideMenu";
 
-function EnglishPage() {
+function About() {
   const [pages, setPages] = useState({
     id: 0,
     Title: "",
@@ -13,7 +11,7 @@ function EnglishPage() {
   });
 
   useEffect(() => {
-    fetchEnglishPage().then((data) => {
+    fetchAbout().then((data) => {
       setPages(data);
     });
   }, []);
@@ -21,4 +19,4 @@ function EnglishPage() {
   return <ContentWithSideMenu siteData={pages} />;
 }
 
-export default EnglishPage;
+export default About;

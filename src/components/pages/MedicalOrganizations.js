@@ -1,8 +1,8 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { fetchMedOrganizations } from "../../../modules/medical_organizations/MedicalOrganizationsService";
-import ContentWithSideMenu from "./ContentWithSideMenu";
+import { fetchMedOrganizations } from "../../modules/medical_organizations/MedicalOrganizationsService";
+import ContentWithSideMenu from "../ContentWithSideMenu/ContentWithSideMenu";
 
 function MedicalOrganizations() {
   const [organizations, setOrganizations] = useState({

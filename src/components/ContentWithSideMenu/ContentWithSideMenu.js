@@ -15,20 +15,7 @@ const ContentWithSideMenu = ({ siteData }) => {
 
   return (
     <div className='content-with-side-menu-container'>
-      <div class='side-menu'>
-        <ul>
-          {siteData.length
-            ? siteData.map(({ id, Title }) => (
-                <li>
-                  <Link to='#' onClick={() => clickHandler(id)}>
-                    {Title}
-                    {/* <button className='btn'></button> */}
-                  </Link>
-                </li>
-              ))
-            : ""}
-        </ul>
-      </div>
+      <SideMenu siteData={siteData} clickHandler={clickHandler} />
       <div class='articles-container'>
         {siteData.length
           ? siteData.map(({ id, Title, Text }) => (
@@ -44,6 +31,29 @@ const ContentWithSideMenu = ({ siteData }) => {
       </div>
     </div>
   );
+};
+
+const SideMenu = ({ siteData, clickHandler }) => {
+  return (
+    <div class='side-menu'>
+      <ul>
+        {siteData.length
+          ? siteData.map(({ id, Title }) => (
+              <li>
+                <Link to='#' onClick={() => clickHandler(id)}>
+                  {Title}
+                  {/* <button className='btn'></button> */}
+                </Link>
+              </li>
+            ))
+          : ""}
+      </ul>
+    </div>
+  );
+};
+
+const NewsArticles = () => {
+  return <div></div>;
 };
 
 export default ContentWithSideMenu;
