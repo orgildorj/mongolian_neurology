@@ -1,48 +1,19 @@
 /** @format */
 
 export const AboutData = {
-  type: "about",
   title: "Бидний тухай",
-  path: "/about/administration",
-  items: [
-    {
-      title: "Удирдлага, бүтэц",
-      path: "/about/administration",
-    },
-    {
-      title: "Гишүүнээр элсэх",
-      path: "/about/membership",
-    },
-    {
-      title: "Дэд бүлгүүд",
-      path: "/about/subgroups",
-    },
-    // {
-    //   title: "Хамтран ажиллагчид",
-    //   path: "/",
-    // },
-    // {
-    //   title: "Шагнал, урамшуулал",
-    //   path: "/about/achievement",
-    // },
-  ],
+  path: "/about",
+  items: [],
 };
 
-export const InfoData = {
-  type: "info",
+export const NewsData = {
   title: "Мэдээлэл",
   path: "/news",
-  items: [
-    // { title: "Зургийн сан", path: "/" },
-    // { title: "Холбоосууд", path: "/" },
-    // { title: "Эмнэлгүүдийн жагсаалт", path: "/info/medical-organizations" },
-    // { title: "Гадаадын хурал, цуглаан", path: "/info/foreign-assemblies" },
-  ],
+  items: [],
 };
 
-export const ContactData = {
-  type: "contact",
-  title: "Холбоо барих",
-  path: "/contact",
+export const MembershipData = {
+  title: "Гишүүнчлэл",
+  path: "/membership",
   items: [],
 };

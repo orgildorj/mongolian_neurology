@@ -3,7 +3,7 @@
 .home-container {
   width: 60%;
   @media screen and (max-width: 960px) {
-    width: 80%;
+    width: 90%;
   }
   margin: 0 auto;
 
@@ -29,7 +29,7 @@
         display: flex;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        border-top: 1px solid #989898;
+        border-top: 1px solid #eee;
         @media (max-width: 760px) {
           flex-direction: column;
         }

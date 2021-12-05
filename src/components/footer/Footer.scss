@@ -1,12 +1,31 @@
 /** @format */
 
 .footer-container {
-  border-top: thin solid #eee;
-  padding: 20px 0;
-  .footer-text-container {
-    width: 50%;
+  border-top: 1px solid rgb(204, 204, 204);
+  padding-top: 1rem;
+  margin: 0 auto;
+  hr {
+    border-top: thin solid rgb(204, 204, 204);
+  }
+
+  .content-container {
+    width: 60%;
+    @media screen and (max-width: 960px) {
+      width: 90%;
+    }
     margin: 0 auto;
-    .copyright-text {
+    h4 {
+      margin: 0;
+      color: rgb(122, 120, 120);
+    }
+  }
+  .copyright-container {
+    width: 60%;
+    @media screen and (max-width: 960px) {
+      width: 90%;
+    }
+    margin: 0 auto;
+    span {
       color: rgba(54, 49, 49, 0.945);
     }
   }

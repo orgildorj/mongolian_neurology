@@ -4,6 +4,9 @@
 .news-container {
   width: 50%;
   margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    width: 90%;
+  }
   .posts-container {
     list-style: none;
     padding: 0;

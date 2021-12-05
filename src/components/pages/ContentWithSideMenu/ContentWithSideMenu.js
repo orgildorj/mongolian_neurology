@@ -14,7 +14,7 @@ const ContentWithSideMenu = ({ siteData }) => {
   };
 
   return (
-    <div className='content-container'>
+    <div className='content-with-side-menu-container'>
       <div class='side-menu'>
         <ul>
           {siteData.length

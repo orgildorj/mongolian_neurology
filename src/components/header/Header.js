@@ -1,38 +1,23 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import Navbar from "./Navbar";
-
 import { gsap } from "gsap";
 import FacebookIcon from "@material-ui/icons/Facebook";
-
 import "./Header.scss";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
 
-  useEffect(() => {
-    if (sidebar) {
-      gsap.to(".navbar", {
-        duration: 1,
-        right: 0,
-        ease: "power1.inOut",
-      });
-    } else {
-      gsap.to(".navbar", {
-        duration: 1,
-        right: "-150%",
-        ease: "power1.inOut",
-      });
-    }
-  }, [sidebar]);
-
   const clickHandler = () => {
     setSidebar(!sidebar);
   };
+
+  useEffect(() => {
+    manageSideBar(sidebar);
+  }, [sidebar]);
 
   return (
     <div className='header'>
@@ -57,6 +42,22 @@ function Header() {
       </div>
     </div>
   );
+}
+
+function manageSideBar(sidebar) {
+  if (sidebar) {
+    gsap.to(".navbar", {
+      duration: 0.35,
+      right: "0%",
+      ease: "power1.inOut",
+    });
+  } else {
+    gsap.to(".navbar", {
+      duration: 0.35,
+      right: "-100%",
+      ease: "power1.inOut",
+    });
+  }
 }
 
 export default Header;

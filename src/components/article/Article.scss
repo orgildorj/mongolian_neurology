@@ -3,6 +3,9 @@
 .article-container {
   width: 60%;
   margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    width: 90%;
+  }
 
   a {
     color: #e40040;
