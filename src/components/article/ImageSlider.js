@@ -8,7 +8,7 @@ import "./ImageSlider.scss";
 import "react-image-gallery/styles/scss/image-gallery.scss";
 
 const ImageSlider = ({ images }) => {
-  console.log(images);
+  if (images === undefined) return <div />;
   return (
     <div>
       {images.length && images.length === 1

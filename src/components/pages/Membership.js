@@ -11,7 +11,7 @@ function Membership() {
     fetchMemInfo().then((data) => setMembershipInfos(data));
   }, []);
 
-  return <ContentWithSideMenu siteData={membershipInfos} />;
+  return <ContentWithSideMenu dataList={membershipInfos} />;
 }
 
 export default Membership;

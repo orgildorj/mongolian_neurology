@@ -7,7 +7,7 @@ function About() {
     id: 0,
     Title: "",
     Text: "",
-    Image: {},
+    Images: {},
   });
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function About() {
     });
   }, []);
 
-  return <ContentWithSideMenu siteData={pages} />;
+  return <ContentWithSideMenu dataList={pages} />;
 }
 
 export default About;

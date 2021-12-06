@@ -5,11 +5,12 @@
   flex-direction: row;
   margin: 0 auto;
   width: 60%;
+  overflow: hidden;
 
   @media screen and (max-width: 960px) {
     width: 90%;
   }
-  .articles-container {
+  .selected-article {
     flex: 3;
     a {
       color: #e40040;
@@ -18,12 +19,14 @@
   }
   .side-menu {
     flex: 1;
+    height: 50vh;
+
     ul {
       padding-left: 0;
       padding-right: 1rem;
       list-style: none;
-      position: sticky;
-      top: 8rem;
+      position: absolute;
+      top: 6rem;
 
       li {
         height: 50px;
@@ -33,16 +36,17 @@
 
         &:hover {
           // color: #e84747;
-          background-color: var(--link-color, var(--primary-color, #0076d6));
+          // background-color: var(--link-color, var(--primary-color, #0076d6));
+          border-left: 3px solid red;
           a {
-            color: white;
+            font-weight: 700;
           }
         }
         a {
           text-align: left;
           text-decoration: none;
           color: black;
-          font-size: 110%;
+          font-size: 105%;
           height: 100%;
           width: 100%;
           display: flex;
@@ -55,7 +59,7 @@
     }
 
     @media screen and (max-width: 960px) {
-      display: none;
+      // display: none;
     }
   }
 }

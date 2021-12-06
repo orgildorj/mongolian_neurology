@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticle } from "../../../modules/article/ArticleService";
-import { Article } from "../../Article/Article";
+import Article from "../../Article/Article";
 import "./NewsArticle.scss";
 
 const NewsArticle = () => {
@@ -22,9 +22,11 @@ const NewsArticle = () => {
     });
   }
 
+  console.log(article);
+
   return (
     <div className='news-article'>
-      <Article siteData={article} />
+      <Article articleData={article} />
     </div>
   );
 };

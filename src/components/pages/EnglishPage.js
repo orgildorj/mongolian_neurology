@@ -18,7 +18,7 @@ function EnglishPage() {
     });
   }, []);
 
-  return <ContentWithSideMenu siteData={pages} />;
+  return <ContentWithSideMenu dataList={pages} />;
 }
 
 export default EnglishPage;

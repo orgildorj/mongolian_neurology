@@ -1,46 +1,31 @@
 /** @format */
 
 import React from "react";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import $ from "jquery";
+import Article from "../Article/Article";
 import "./ContentWithSideMenu.scss";
 
-const ContentWithSideMenu = ({ siteData }) => {
-  const clickHandler = (id) => {
-    var position = $(`#${id}`).offset();
-    window.scrollTo(0, position.top - 109.42623901367188);
-  };
+const ContentWithSideMenu = ({ dataList }) => {
+  console.log(dataList);
+  let { path } = useRouteMatch();
 
   return (
     <div className='content-with-side-menu-container'>
-      <SideMenu siteData={siteData} clickHandler={clickHandler} />
-      <div class='articles-container'>
-        {siteData.length
-          ? siteData.map(({ id, Title, Text }) => (
-              <div className='sub-section' id={`${id}`}>
-                <h1>{Title}</h1>
-                <hr />
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {Text}
-                </ReactMarkdown>
-              </div>
-            ))
-          : ""}
-      </div>
+      <SelectedContent dataList={dataList} path={path} />
+      <SideMenu dataList={dataList} path={path} />
     </div>
   );
 };
 
-const SideMenu = ({ siteData, clickHandler }) => {
+const SideMenu = ({ dataList, path }) => {
   return (
     <div class='side-menu'>
       <ul>
-        {siteData.length
-          ? siteData.map(({ id, Title }) => (
+        {dataList.length
+          ? dataList.map(({ id, Title }) => (
               <li>
-                <Link to='#' onClick={() => clickHandler(id)}>
+                <Link to={`${path}/${id}`}>
                   {Title}
                   {/* <button className='btn'></button> */}
                 </Link>
@@ -52,8 +37,23 @@ const SideMenu = ({ siteData, clickHandler }) => {
   );
 };
 
-const NewsArticles = () => {
-  return <div></div>;
+const SelectedContent = ({ dataList, path }) => {
+  return (
+    <div className='selected-article'>
+      <Switch>
+        <Route exact path={`${path}`}>
+          <Article articleData={dataList[0]} />
+        </Route>
+        {dataList.length
+          ? dataList.map(({ id }) => (
+              <Route exact path={`${path}/${id}`}>
+                <Article articleData={dataList[id - 1]} />
+              </Route>
+            ))
+          : ""}
+      </Switch>
+    </div>
+  );
 };
 
 export default ContentWithSideMenu;
